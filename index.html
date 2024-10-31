@@ -11,6 +11,9 @@
 <body>
     <header>
         <nav>
+            <button class="menu-toggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
@@ -243,6 +246,30 @@
             })
             .catch(error => {
                 alert('Error al enviar el mensaje. Por favor, intenta nuevamente.');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú móvil
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Cerrar menú al hacer click en un enlace
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Cerrar menú al hacer scroll
+            window.addEventListener('scroll', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
             });
         });
     </script>

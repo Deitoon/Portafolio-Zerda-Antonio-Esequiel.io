@@ -1098,3 +1098,156 @@ header.scrolled {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+/* Estilos del menú de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 26, 26, 0.95);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+/* Botón hamburguesa para móvil */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+/* Media Queries para Responsive */
+@media screen and (max-width: 768px) {
+    /* Navegación */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(26, 26, 26, 0.95);
+        padding: 1rem 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    /* Sección Inicio */
+    .titulo-animado {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .texto-animado {
+        font-size: 1.2rem;
+        flex-direction: column;
+    }
+
+    .botones-inicio {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Sección Sobre Mí */
+    .sobre-mi-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .sobre-mi-imagen {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sección Proyectos */
+    .proyecto-card {
+        margin: 1rem;
+    }
+
+    .proyecto-imagen {
+        height: 250px;
+    }
+
+    .proyecto-info {
+        padding: 1rem;
+    }
+
+    .tecnologias {
+        flex-wrap: wrap;
+    }
+
+    /* Sección Contacto */
+    .contacto-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .contacto-info, 
+    .contacto-formulario {
+        padding: 1.5rem;
+    }
+
+    .form-grupo {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Media Queries para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .sobre-mi-container {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .proyecto-card {
+        max-width: 90%;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .titulo-animado {
+        font-size: 1.8rem;
+    }
+
+    .habilidades-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .proyecto-imagen {
+        height: 200px;
+    }
+
+    .redes-sociales a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+}
