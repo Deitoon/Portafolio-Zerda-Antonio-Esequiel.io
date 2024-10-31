@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Antonio Esequiel Zerda</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Antonio Esequiel Zerda</h1>
+            <p>Desarrollador de Software</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <div class="sobre-mi-container">
+                <div class="sobre-mi-imagen">
+                    <img src="ruta/a/tu/foto.jpg" alt="Antonio Esequiel Zerda">
+                </div>
+                <div class="sobre-mi-contenido">
+                    <p class="sobre-mi-descripcion">
+                        Soy un desarrollador de software apasionado por crear soluciones tecnológicas innovadoras. 
+                        Me especializo en desarrollo web y disfruto enfrentando nuevos desafíos.
+                    </p>
+                    <div class="habilidades">
+                        <h3>Mis Habilidades</h3>
+                        <div class="habilidades-grid">
+                            <div class="habilidad">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="habilidad">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="habilidad">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="habilidad">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="habilidad">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="habilidad">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="proyectos-container">
+                <div class="proyecto-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="proyecto-card">
+                        <img src="imgProyect/logSupermarket.png" alt="Proyecto Supermarket" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <h3>Proyecto Supermarket</h3>
+                            <p>Sistema completo de gestión para supermercados desarrollado con PHP y MySQL.</p>
+                            <div class="tecnologias">
+                                <span class="tecnologia-tag">PHP</span>
+                                <span class="tecnologia-tag">MySQL</span>
+                                <span class="tecnologia-tag">HTML</span>
+                            </div>
+                            <a href="https://github.com/tuusuario/supermarket" class="proyecto-link" target="_blank">
+                                <img src="imgProyect/LogGithub.png" alt="GitHub" class="github-logo">
+                                Ver proyecto
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="proyecto-card">
+                        <img src="imgProyect/logSupermarket.png" alt="Proyecto 2" class="proyecto-imagen">
+                        <div class="proyecto-info">
+                            <h3>Proyecto 2</h3>
+                            <p>Descripción del segundo proyecto. Puedes añadir detalles relevantes aquí.</p>
+                            <div class="tecnologias">
+                                <span class="tecnologia-tag">JavaScript</span>
+                                <span class="tecnologia-tag">React</span>
+                                <span class="tecnologia-tag">Node.js</span>
+                            </div>
+                            <a href="https://github.com/tuusuario/proyecto2" class="proyecto-link" target="_blank">
+                                <img src="imgProyect/LogGithub.png" alt="GitHub" class="github-logo">
+                                Ver proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-container">
+                <!-- Información de contacto -->
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contacto-detalles">
+                        <div class="contacto-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>zerdaezequie55@gmail.com</p>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+ 54 9 379 486 5469</p>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Corrientes Capital, Corrientes, Argentina</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón de descarga CV -->
+                    <div class="cv-download">
+                        <a href="cv/CV Zerda Antonio Esequiel.pdf" class="btn-cv" download>
+                            <i class="fas fa-download"></i>
+                            Descargar CV
+                        </a>
+                    </div>
+                    
+                    <!-- Redes sociales -->
+                    <div class="redes-sociales">
+                        <a href="https://linkedin.com/in/antonio-esequiel-zerda-" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Deitoon" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/deitoon_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <form class="contacto-formulario" action="procesar_contacto.php" method="POST">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Antonio Esequiel Zerda. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.contacto-formulario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('procesar_contacto.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.mensaje);
+                    this.reset(); // Limpia el formulario
+                } else {
+                    alert(data.mensaje);
+                }
+            })
+            .catch(error => {
+                alert('Error al enviar el mensaje. Por favor, intenta nuevamente.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+Este es el Index.Html : <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejar un comentario</title>
+</head>
+<body>
+    <h1>Dejar un comentario</h1>
+    <form action="procesar_comentario.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensaje">Comentario:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Enviar comentario">
+    </form>
+</body>
+</html>
+
+Esta seria conexion.php : <?php
+// Parámetros de conexión
+$server = "localhost";
+$user = "root";
+$pass = "";
+$db = "comentario";
+
+// Crear la conexión a MySQL
+$conexion = new mysqli($server, $user, $pass, $db);
+
+// Verificar la conexión
+if ($conexion->connect_errno) {
+    die("Error en la conexión: " . $conexion->connect_error);
+}
+?>
+
+y esta seria procesar_contacto.php : <?php
+// Incluir el archivo de conexión
+include('conexion.php');
+
+// Verificar si el formulario ha sido enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recibir los datos del formulario
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $mensaje = $_POST['mensaje'];
+
+    // Evitar inyección SQL usando sentencias preparadas
+    $stmt = $conexion->prepare("INSERT INTO comentarios (nombre, email, mensaje) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $nombre, $email, $mensaje);
+
+    // Ejecutar la consulta
+    if ($stmt->execute()) {
+        echo "Comentario guardado correctamente";
+    } else {
+        echo "Error al guardar el comentario: " . $stmt->error;
+    }
+
+    // Cerrar la declaración y la conexión
+    $stmt->close();
+    $conexion->close();
+}
+?>
