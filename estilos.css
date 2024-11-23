@@ -67,6 +67,36 @@ header nav {
     margin-bottom: 20px;
 }
 
+.certificaciones-btn-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.certificaciones-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.certificaciones-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    background: #2980b9;
+}
+
+.certificaciones-btn i {
+    font-size: 1.4rem;
+}
+
 /* Formulario de contacto */
 .form-group {
     margin-bottom: 15px;
